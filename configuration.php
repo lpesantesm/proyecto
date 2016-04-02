@@ -12,12 +12,12 @@ class JConfig {
 	public $debug = '0';
 	public $debug_lang = '0';
 	public $dbtype = 'mysql';
-	public $host = 'http://us-cdbr-iron-east-03.cleardb.net:3306';
+	public $host = 'us-cdbr-iron-east-03.cleardb.net:3306';
 	public $user = 'b3d2925c74c520';
 	public $password = '4932b4ac';
 	public $db = 'heroku_5c1f36090b6e6ae';
 	public $dbprefix = 'efem_';
-	public $live_site = 'http://efemerides.herokuapp.com/';
+	public $live_site = 'https://efemerides.herokuapp.com/';
 	public $secret = 'i48ml38CgP5ZZX8V';
 	public $gzip = '0';
 	public $error_reporting = 'default';
