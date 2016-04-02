@@ -12,7 +12,7 @@ class JConfig {
 	public $debug = '0';
 	public $debug_lang = '0';
 	public $dbtype = 'mysql';
-	public $host = 'us-cdbr-iron-east-03.cleardb.net';
+	public $host = 'http://us-cdbr-iron-east-03.cleardb.net:3306';
 	public $user = 'b3d2925c74c520';
 	public $password = '4932b4ac';
 	public $db = 'heroku_5c1f36090b6e6ae';
