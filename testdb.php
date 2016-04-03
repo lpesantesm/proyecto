@@ -1,16 +1,30 @@
 <?
-echo "HOLA";
-// public $dbserver = 'us-cdbr-iron-east-03.cleardb.net';
-// public $dbuser = 'b3d2925c74c520';
-// public $dbpassword = '4932b4ac';
-// public $dbname = 'heroku_5c1f36090b6e6ae';
-//
-//    $connect=mysql_connect($dbserver,$dbuser,$dbpassword) or die("Unable to Connect");
-//    mysql_select_db($dbname) or die("Could not open the db");
-//    $showtablequery="SHOW TABLES FROM dbname";
-//    $query_result=mysql_query($showtablequery);
-//    while($showtablerow = mysql_fetch_array($query_result))
-//    {
-//    echo $showtablerow[0]." ";
-//    }
-   ?>
+
+$dbserver = 'us-cdbr-iron-east-03.cleardb.net';
+$dbuser = 'b3d2925c74c520';
+$dbpassword = '4932b4ac';
+$dbname = 'heroku_5c1f36090b6e6ae';
+
+$ssl_cliente_key='b3d2925c74c520-key.pem';
+$ssl_cliente_cert='b3d2925c74c520-key.pem';
+$ssl_cliente_ca='cleardb-ca.pem';
+
+
+
+$connect=mysqli_init();
+if (!$connect)
+  {
+  die("mysqli_init failed");
+  }
+
+$connect->ssl_set($ssl_cliente_key, $ssl_cliente_cert, $ssl_cliente_ca, null, null);
+$connect->real_connect($dbserver, $dbuser, $dbpassword, $dbname);
+
+echo "SE CONECTO CORRECTAMENTE"; 
+
+
+mysqli_close($connect);
+
+
+
+?>
