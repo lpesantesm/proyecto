@@ -16,7 +16,7 @@ class JConfig {
 	public $user = 'b3d2925c74c520';
 	public $password = '4932b4ac';
 	//public $db = 'heroku_5c1f36090b6e6ae';
-	public $db = DATABASE_URL;
+	public $db ='heroku_5c1f36090b6e6ae?sslca=cleardb-ca.pem&sslcert=b3d2925c74c520-cert.pem&sslkey=b3d2925c74c520-key.pem&reconnect=true';
 	public $dbprefix = 'efem_';
 	public $live_site = '';
 	public $secret = 'i48ml38CgP5ZZX8V';
