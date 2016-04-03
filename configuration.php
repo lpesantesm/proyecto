@@ -11,8 +11,8 @@ class JConfig {
 	public $access = '1';
 	public $debug = '0';
 	public $debug_lang = '0';
-	public $dbtype = 'mysql';
-	public $host = 'localhost';
+	public $dbtype = 'mysqli';
+	public $host = 'efemerides';
 	public $user = 'b3d2925c74c520';
 	public $password = '4932b4ac';
 	public $db = 'heroku_5c1f36090b6e6ae';
