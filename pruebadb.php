@@ -6,7 +6,8 @@ $dbuser = 'b3d2925c74c520';
 $dbpassword = '4932b4ac';
 $dbname = 'heroku_5c1f36090b6e6ae';
 
-   $connect=mysql_connect($dbserver,$dbuser,$dbpassword) or die("Unable to Connect");
+   $connect=mysql_connect($dbserver,$dbuser,$dbpassword) or die("Unable to Connect".mysql_error());
+   echo "    SI SE CONECTO";
    mysql_select_db($dbname) or die("Could not open the db");
 
 

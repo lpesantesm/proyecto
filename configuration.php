@@ -11,13 +11,13 @@ class JConfig {
 	public $access = '1';
 	public $debug = '0';
 	public $debug_lang = '0';
-	public $dbtype = 'mysqli';
-	public $host = 'efemerides';
+	public $dbtype = 'mysql';
+	public $host = 'us-cdbr-iron-east-03.cleardb.net';
 	public $user = 'b3d2925c74c520';
 	public $password = '4932b4ac';
 	public $db = 'heroku_5c1f36090b6e6ae';
 	public $dbprefix = 'efem_';
-	public $live_site = 'https://efemerides.herokuapp.com/';
+	public $live_site = '';
 	public $secret = 'i48ml38CgP5ZZX8V';
 	public $gzip = '0';
 	public $error_reporting = 'default';
@@ -56,8 +56,8 @@ class JConfig {
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
 	public $feed_email = 'none';
-	public $log_path = '/app/logs';
-	public $tmp_path = '/app/tmp';
+	public $log_path = '/var/www/html/proyecto/logs';
+	public $tmp_path = '/var/www/html/proyecto/tmp';
 	public $lifetime = '15';
 	public $session_handler = 'database';
 }
