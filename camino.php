@@ -1,3 +1,2 @@
-<?php  echo $_SERVER['DOCUMENT_ROOT'];
-echo "OJOOO";
-?>
+
+<?php echo __FILE__; ?>
