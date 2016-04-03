@@ -11,11 +11,12 @@ class JConfig {
 	public $access = '1';
 	public $debug = '0';
 	public $debug_lang = '0';
-	public $dbtype = 'mysql2';
+	public $dbtype = 'mysql';
 	public $host = 'us-cdbr-iron-east-03.cleardb.net';
 	public $user = 'b3d2925c74c520';
 	public $password = '4932b4ac';
-	public $db = 'heroku_5c1f36090b6e6ae';
+	//public $db = 'heroku_5c1f36090b6e6ae';
+	public $db = DATABASE_URL;
 	public $dbprefix = 'efem_';
 	public $live_site = '';
 	public $secret = 'i48ml38CgP5ZZX8V';
