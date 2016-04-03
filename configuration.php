@@ -11,7 +11,7 @@ class JConfig {
 	public $access = '1';
 	public $debug = '0';
 	public $debug_lang = '0';
-	public $dbtype = 'mysql';
+	public $dbtype = 'mysql2';
 	public $host = 'us-cdbr-iron-east-03.cleardb.net';
 	public $user = 'b3d2925c74c520';
 	public $password = '4932b4ac';
