@@ -25,6 +25,8 @@ Options -Indexes
 ## Mod_rewrite in use.
 
 RewriteEngine On
+RewriteCond %{HTTPS} OFF
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
 ## Begin - Rewrite rules to block out some common exploits.
 # If you experience problems on your site block out the operations listed below

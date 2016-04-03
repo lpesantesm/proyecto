@@ -15,10 +15,10 @@ class JConfig {
 	public $host = 'us-cdbr-iron-east-03.cleardb.net';
 	public $user = 'b3d2925c74c520';
 	public $password = '4932b4ac';
-	//public $db = 'heroku_5c1f36090b6e6ae';
-	public $db ='heroku_5c1f36090b6e6ae?sslca=cleardb-ca.pem&sslcert=b3d2925c74c520-cert.pem&sslkey=b3d2925c74c520-key.pem&reconnect=true';
+	public $db = 'heroku_5c1f36090b6e6ae';
+	//public $db ='heroku_5c1f36090b6e6ae?sslca=cleardb-ca.pem&sslcert=b3d2925c74c520-cert.pem&sslkey=b3d2925c74c520-key.pem&reconnect=true';
 	public $dbprefix = 'efem_';
-	public $live_site = '';
+	public $live_site = 'https://efemerides.herokuapp.com';
 	public $secret = 'i48ml38CgP5ZZX8V';
 	public $gzip = '0';
 	public $error_reporting = 'default';
@@ -59,6 +59,8 @@ class JConfig {
 	public $feed_email = 'none';
 	public $log_path = '/app/logs';
 	public $tmp_path = '/app/tmp';
+	//public $log_path = '/var/www/html/proyecto/logs';
+	//public $tmp_path = '/var/www/html/proyecto/tmp';
 	public $lifetime = '15';
 	public $session_handler = 'database';
 }
