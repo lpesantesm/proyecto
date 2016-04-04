@@ -1,5 +1,6 @@
 <?php
-echo "OJOOO";
+echo "OJOOO=";
+echo $_ENV["CLEARDB_DATABASE_URL"]."----";
 
 $dbserver = 'us-cdbr-iron-east-03.cleardb.net';
 $dbuser = 'b3d2925c74c520';

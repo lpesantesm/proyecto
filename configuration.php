@@ -1,4 +1,21 @@
 <?php
+
+// ** ClearDB settings - from Heroku Environment ** //
+$db = parse_url($_ENV["CLEARDB_DATABASE_URL"]);
+
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for Joomla */
+define('DB_NAME', trim($db["path"],"/"));
+
+/** MySQL database username */
+define('DB_USER', $db["user"]);
+
+/** MySQL database password */
+define('DB_PASSWORD', $db["pass"]);
+
+/** MySQL hostname */
+define('DB_HOST', $db["host"]);
+
 class JConfig {
 	public $offline = '0';
 	public $offline_message = 'Este sitio está cerrado por tareas de mantenimiento.<br />Por favor, inténtelo nuevamente más tarde.';
@@ -11,14 +28,21 @@ class JConfig {
 	public $access = '1';
 	public $debug = '0';
 	public $debug_lang = '0';
-	public $dbtype = 'mysql';
-	public $host = 'us-cdbr-iron-east-03.cleardb.net';
-	public $user = 'b3d2925c74c520';
-	public $password = '4932b4ac';
-	public $db = 'heroku_5c1f36090b6e6ae';
+	// public $dbtype = 'mysql';
+	// public $host = 'us-cdbr-iron-east-03.cleardb.net';
+	// public $user = 'b3d2925c74c520';
+	// public $password = '4932b4ac';
+	// public $db = 'heroku_5c1f36090b6e6ae';
 	//public $db ='heroku_5c1f36090b6e6ae?sslca=cleardb-ca.pem&sslcert=b3d2925c74c520-cert.pem&sslkey=b3d2925c74c520-key.pem&reconnect=true';
+	  public $dbtype = 'mysqli';
+		public $host = DB_HOST;
+		public $user = DB_USER;
+		public $password = DB_PASSWORD;
+		public $db = DB_NAME;
+
 	public $dbprefix = 'efem_';
-	public $live_site = 'https://efemerides.herokuapp.com';
+	//public $live_site = 'https://efemerides.herokuapp.com';
+	public $live_site = 'http://localhost:81/proyecto';
 	public $secret = 'i48ml38CgP5ZZX8V';
 	public $gzip = '0';
 	public $error_reporting = 'default';
@@ -57,10 +81,10 @@ class JConfig {
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
 	public $feed_email = 'none';
-	public $log_path = '/app/logs';
-	public $tmp_path = '/app/tmp';
-	//public $log_path = '/var/www/html/proyecto/logs';
-	//public $tmp_path = '/var/www/html/proyecto/tmp';
+	//public $log_path = '/app/logs';
+	//public $tmp_path = '/app/tmp';
+	public $log_path = '/var/www/html/proyecto/logs';
+	public $tmp_path = '/var/www/html/proyecto/tmp';
 	public $lifetime = '15';
 	public $session_handler = 'database';
 }
