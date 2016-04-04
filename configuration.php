@@ -41,8 +41,8 @@ class JConfig {
 		public $db = DB_NAME;
 
 	public $dbprefix = 'efem_';
-	//public $live_site = 'https://efemerides.herokuapp.com';
-	public $live_site = 'http://localhost:81/proyecto';
+	public $live_site = 'https://efemerides.herokuapp.com';
+	//public $live_site = 'http://localhost:81/proyecto';
 	public $secret = 'i48ml38CgP5ZZX8V';
 	public $gzip = '0';
 	public $error_reporting = 'default';
@@ -81,10 +81,10 @@ class JConfig {
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
 	public $feed_email = 'none';
-	//public $log_path = '/app/logs';
-	//public $tmp_path = '/app/tmp';
-	public $log_path = '/var/www/html/proyecto/logs';
-	public $tmp_path = '/var/www/html/proyecto/tmp';
+	public $log_path = '/app/logs';
+	public $tmp_path = '/app/tmp';
+	//public $log_path = '/var/www/html/proyecto/logs';
+	//public $tmp_path = '/var/www/html/proyecto/tmp';
 	public $lifetime = '15';
 	public $session_handler = 'database';
 }
